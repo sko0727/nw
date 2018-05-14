@@ -62,7 +62,7 @@ def login():
             return redirect("/")
         else:                                          
             ## 로그인이 실패했을때
-            return "<script>alert('login fail');history.bakc(-1);</script>"
+            return "<script>alert('login fail');history.back(-1);</script>"
 
     if 'id' in session:     ## id 값이 세션에 있으면
         return redirect("/")
