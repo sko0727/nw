@@ -10,7 +10,7 @@ DATABASE = 'database.db'                                                        
 app = Flask(__name__)                                    ## flask를 초기화 하는 부분
 app.secret_key = b'_snafklnqkls123m1kmkasd'              ## 세션 만들때 이키를 바탕으로 암호화함.   
                 
-def get_db():                                            ## get_db라는 데이터베이스를 가져오는 부분
+def get_db():                                            ## get_db 데이터베이스를 가져오는 부분
     db = getattr(g, '_database', None)
     if db is None:
         db = g._database = sqlite3.connect(DATABASE)     ## sqlite3에 데이터베이스에 접속하는 기능을 이용해 connect(접속)을 맺고 g._datebase에 저장을하고 알기 쉽게 db 변수에 또 저장
